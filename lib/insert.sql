@@ -1,41 +1,44 @@
-INSERT INTO Series (title, author_id, subgenre_id) VALUES ("Harry Potter", 1, 1);
-INSERT INTO Series (title, author_id, subgenre_id) VALUES ("Lord of the Rings", 2, 2);
+INSERT INTO series (title, author_id, subgenre_id) VALUES ("A Song of Ice and Fire", 1, 1);
+INSERT INTO series (title, author_id, subgenre_id) VALUES ("Harry Potter", 2, 2);
 
-INSERT INTO Books (title, year, series_id) VALUES ("Lord of the Rings: The Fellowship of the Ring", 1954, 2);
-INSERT INTO Books (title, year, series_id) VALUES ("Lord of the Rings: The Two Towers", 1954, 2);
-INSERT INTO Books (title, year, series_id) VALUES ("Lord of the Rings: The Return of the King", 1955, 2);
-INSERT INTO Books (title, year, series_id) VALUES ("Harry Potter and the Sorcerer's Stone", 1997, 1);
-INSERT INTO Books (title, year, series_id) VALUES ("Harry Potter and the Chamber of Secrets", 1998, 1);
-INSERT INTO Books (title, year, series_id) VALUES ("Harry Potter and the Prisoner of Azkaban", 1999, 1);
+INSERT INTO subgenres (name) VALUES ("High Fantasy");
+INSERT INTO subgenres (name) VALUES ("Fantasy Fiction");
 
-INSERT INTO Characters (name, motto, species, author_id, series_id) VALUES ("Galadriel", "This is Nenya, the Ring of Adamant, and I am its keeper.", "elf", 2, 2);
-INSERT INTO Characters (name, motto, species, author_id, series_id) VALUES ("Legolas", "Do not think I won't kill you, dwarf! It would be my pleasure", "elf", 2, 2);
-INSERT INTO Characters (name, motto, species, author_id, series_id) VALUES ("Frodo Baggins", "I will take the Ring, though I do not know the way...", "hobbit", 2, 2);
-INSERT INTO Characters (name, motto, species, author_id, series_id) VALUES ("Harry Potter", "Expeliamus!", "human", 1, 1);
-INSERT INTO Characters (name, motto, species, author_id, series_id) VALUES ("Hermione Granger", "You're going to get yourself killed...", "human", 1, 1);
-INSERT INTO Characters (name, motto, species, author_id, series_id) VALUES ("Ron Weasley", "I've got a bad feeling about this...", "human", 1, 1);
-INSERT INTO Characters (name, motto, species, author_id, series_id) VALUES ("Lucius Malfoy", "Die Potter!", "human", 1, 1);
-INSERT INTO Characters (name, motto, species, author_id, series_id) VALUES ("Rubeus Hagrid", "Just gotta know how to calm 'em", "half-giant", 1, 1);
+INSERT INTO authors (name) VALUES ("George R. R. Martin");
+INSERT INTO authors (name) VALUES ("J.K. Rowling");
 
-INSERT INTO SubGenres (name) VALUES ("Wizardry");
-INSERT INTO SubGenres (name) VALUES ("Medieval Lore");
+INSERT INTO books (title, year, series_id) VALUES ("A Game of Thrones", 1996, 1);
+INSERT INTO books (title, year, series_id) VALUES ("A Clash of Kings", 1998, 1);
+INSERT INTO books (title, year, series_id) VALUES ("A Storm of Swords", 2000, 1);
 
-INSERT INTO Authors (name) VALUES ("J.K. Rowling");
-INSERT INTO Authors (name) VALUES ("J.R.R. Tolkien");
+INSERT INTO books (title, year, series_id) VALUES ("The Philosopher's Stone", 1997, 2);
+INSERT INTO books (title, year, series_id) VALUES ("The Chamber of Secrets", 1998, 2);
+INSERT INTO books (title, year, series_id) VALUES ("The Prisoner of Azkaban", 1999, 2);
 
-INSERT INTO character_books (character_id, book_id) VALUES (1, 1);
-INSERT INTO character_books (character_id, book_id) VALUES (2, 1);
-INSERT INTO character_books (character_id, book_id) VALUES (3, 1);
+INSERT INTO characters (name, motto, species, author_id) VALUES ("Daenerys Targaryen", "Fire cannot kill a dragon.", "human", 1);
+INSERT INTO characters (name, motto, species, author_id) VALUES ("Jon Snow", "My father taught me big men fall just as quick as little ones if you put a sword through their hearts.", "human", 1);
+INSERT INTO characters (name, motto, species, author_id) VALUES ("Arya Stark", "Leave one wolf alive and the sheep are never safe.", "human", 1);
+INSERT INTO characters (name, motto, species, author_id) VALUES ("Sansa Stark", "Your words will disappear.", "human", 1);
+
+INSERT INTO characters (name, motto, species, author_id) VALUES ("Hermione Granger", "Books! And cleverness!", "muggle-born", 2);
+INSERT INTO characters (name, motto, species, author_id) VALUES ("Harry Potter", "It matters not what someone is born, but what they grow to be.", "half-blood", 2);
+INSERT INTO characters (name, motto, species, author_id) VALUES ("Ron Weasley", "Why spiders?", "pure-blood", 2);
+INSERT INTO characters (name, motto, species, author_id) VALUES ("Dobby the House Elf", "Dobby has come to protect, even if he does have to shut his ears in the oven door.", "elf", 2);
+
 INSERT INTO character_books (character_id, book_id) VALUES (1, 2);
-INSERT INTO character_books (character_id, book_id) VALUES (2, 2);
-INSERT INTO character_books (character_id, book_id) VALUES (3, 2);
 INSERT INTO character_books (character_id, book_id) VALUES (1, 3);
+INSERT INTO character_books (character_id, book_id) VALUES (2, 1);
 INSERT INTO character_books (character_id, book_id) VALUES (2, 3);
-INSERT INTO character_books (character_id, book_id) VALUES (3, 3);
-INSERT INTO character_books (character_id, book_id) VALUES (4, 4);
-INSERT INTO character_books (character_id, book_id) VALUES (4, 5);
-INSERT INTO character_books (character_id, book_id) VALUES (4, 6);
-INSERT INTO character_books (character_id, book_id) VALUES (5, 4);
-INSERT INTO character_books (character_id, book_id) VALUES (5, 5);
-INSERT INTO character_books (character_id, book_id) VALUES (5, 6);
-INSERT INTO character_books (character_id, book_id) VALUES (6, 4);
+INSERT INTO character_books (character_id, book_id) VALUES (3, 1);
+INSERT INTO character_books (character_id, book_id) VALUES (3, 2);
+INSERT INTO character_books (character_id, book_id) VALUES (4, 1);
+INSERT INTO character_books (character_id, book_id) VALUES (4, 3);
+
+INSERT INTO character_books (character_id, book_id) VALUES (5, 1);
+INSERT INTO character_books (character_id, book_id) VALUES (5, 2);
+INSERT INTO character_books (character_id, book_id) VALUES (6, 1);
+INSERT INTO character_books (character_id, book_id) VALUES (6, 2);
+INSERT INTO character_books (character_id, book_id) VALUES (7, 1);
+INSERT INTO character_books (character_id, book_id) VALUES (7, 3);
+INSERT INTO character_books (character_id, book_id) VALUES (8, 2);
+INSERT INTO character_books (character_id, book_id) VALUES (8, 3);
